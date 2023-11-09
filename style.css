@@ -1,5 +1,6 @@
 body {
     background-image: url(./img/istockphoto-1418181375-2048x2048.jpg);
     background-repeat: no-repeat;
-    background-size: 200%;
+    background-size: cover;
+
 }
