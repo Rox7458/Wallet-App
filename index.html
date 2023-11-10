@@ -19,36 +19,36 @@
             <form class="row g-3">
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label text-light">Date</label>
-                  <input type="date" class="form-control" id="inputEmail4">
+                  <input type="date" class="form-control date-number" id="inputEmail4">
                 </div>
 
                 <div class="col-md-6">
                   <label for="inputPassword4" class="form-label text-light">Amount Spent</label>
-                  <input type="number" class="form-control" id="inputPassword4" placeholder="1000$">
+                  <input type="number" class="form-control amount-spent" id="inputPassword4" placeholder="1000$">
                 </div>
 
                 <div class="col-12">
-                  <label for="inputAddress" class="form-label text-light">Spending Area</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Rent,Bill">
+                  <label for="inputAddress" class="form-label text-light">Kind Of Spending</label>
+                  <input type="text" class="form-control kind-spending" id="inputAddress" placeholder="Rent,Bill">
                 </div>
             </form>
+
+            <div class="col-12 d-flex justify-content-center">
+                <button type="submit" class="btn btn-danger w-25 m-2 btn-save">Save</button>
+            </div>
         </div>
 
         <div class="p-4">
 
-            <div class="col-12 d-flex justify-content-center">
-                <button type="submit" class="btn btn-danger m-2">Save</button>
-            </div>
-    
             <div class="col-12 d-flex gap-1">
-                <input type="text" class="form-control" id="inputAddress" placeholder="rent,bill">
-                <button type="submit" class="btn btn-danger h-25">Add</button>
+                <input type="text" class="form-control income-money" id="inputAddress" placeholder="write your earning">
+                <button type="submit" class="btn btn-danger h-25 btn-add">Add</button>
             </div>
     
             <div class="mt-4 text-center">
                 <ul class="list-group list-group-horizontal">
                     <li class="list-group-item w-25">Date</li>
-                    <li class="list-group-item w-50">Spending Area</li>
+                    <li class="list-group-item w-50">Kind Of Spending</li>
                     <li class="list-group-item w-25">Amount</li>
                     <li class="list-group-item">Process</li>
                 </ul>
@@ -58,21 +58,21 @@
                 <div class="w-50 text-end">
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group-item w-100">Earning ($) :</li>
-                        <li class="list-group-item w-50">0</li>
+                        <li class="list-group-item w-50 earning">0</li>
                     </ul>
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group-item w-100">Outgoing ($) :</li>
-                        <li class="list-group-item w-50">0</li>
+                        <li class="list-group-item w-50 outgoing text-bg-danger">0</li>
                     </ul>
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group-item w-100">Remainder ($) :</li>
-                        <li class="list-group-item w-50">0</li>
+                        <li class="list-group-item w-50 remainder">0</li>
                     </ul>
                 </div>
             </div>
     
             <div class="col-12 d-flex justify-content-center m-3">
-                <button type="submit" class="btn btn-danger m-2">Clear Informations</button>
+                <button type="submit" class="btn btn-danger m-2 btn-clear">Clear Informations</button>
             </div>
 
         </div>
