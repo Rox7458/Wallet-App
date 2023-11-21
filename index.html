@@ -40,19 +40,30 @@
 
         <div class="p-4">
 
-            <div class="col-12 d-flex gap-1">
-                <input type="text" class="form-control income-money" id="inputAddress" placeholder="write your earning">
+            <div class="col-12 d-flex gap-1 add-form">
+                <input type="text" class="form-control add-input" id="inputAddress" placeholder="write your earning">
                 <button type="submit" class="btn btn-success  h-25 btn-add">Add</button>
             </div>
-    
-            <div class="mt-4 text-center">
-                <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item w-25">Date</li>
-                    <li class="list-group-item w-50">Kind Of Spending</li>
-                    <li class="list-group-item w-25">Amount</li>
-                    <li class="list-group-item">Process</li>
-                </ul>
-            </div>
+
+            <table id="harcama-tablosu" class="table table-bordered table-hover table-striped mt-4 text-center">
+                <thead>
+                    <tr>
+                      <th scope="col" class="w-25">Tarih</th>
+                      <th scope="col" class="w-50">Harcama Alanı</th>
+                      <th scope="col">Miktar (₺)</th>
+                      <th scope="col">İşlem</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="harcama-body">
+                    <!-- <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr> -->
+                  </tbody>
+            </table>
     
             <div class="d-flex justify-content-end mt-4">
                 <div class="w-50 text-end">
@@ -62,7 +73,7 @@
                     </ul>
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group-item w-100">Outgoing ($) :</li>
-                        <li class="list-group-item w-50 outgoing text-bg-danger">0</li>
+                        <li class="list-group-item w-50 outgoing">0</li>
                     </ul>
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group-item w-100">Remainder ($) :</li>

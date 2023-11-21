@@ -1,5 +1,19 @@
-const date = document.querySelector(".date-number").innerText
-const amount = document.querySelector(".amount-spent")
-const kindSpending = document.querySelector(".kind-spending").innerText
-const gider = document.querySelector(".outgoing")
-const saveBtn = document.querySelector(".btn-save")
+//selectors
+
+const addBtn = document.querySelector(".btn-add")
+const addInput = document.querySelector(".add-input")
+const addForm = document.querySelector(".add-form")
+
+const earningOut = document.querySelector(".earning")
+
+let gelirler = 0
+
+addForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    gelirler = gelirler + Number(addInput.value)
+    console.log(gelirler);
+    localStorage.setItem("gelirler", gelirler)
+    earningOut.innerText = gelirler
+    addForm.reset()
+})
+
