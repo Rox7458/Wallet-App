@@ -16,26 +16,27 @@
         <div class="p-4 rounded-3 text-light">
             <h3 class="m-2 text-center">Expenditure Form</h3>
 
-            <form class="row g-3">
+            <form class="row g-3" id="form-save">
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label text-light">Date</label>
-                  <input type="date" class="form-control date-number" id="inputEmail4">
+                  <input type="date" class="form-control" id="date-input">
                 </div>
 
                 <div class="col-md-6">
                   <label for="inputPassword4" class="form-label text-light">Amount</label>
-                  <input type="number" class="form-control amount-spent" id="inputPassword4" placeholder="1000$">
+                  <input type="number" class="form-control" id="amount-input" placeholder="1000$">
                 </div>
 
                 <div class="col-12">
                   <label for="inputAddress" class="form-label text-light">Spending Area</label>
-                  <input type="text" class="form-control kind-spending" id="inputAddress" placeholder="Rent,Bill">
+                  <input type="text" class="form-control" id="spending-area-input" placeholder="Rent,Bill">
+                </div>
+
+                <div class="col-12 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-danger w-25 m-2" id="btn-save">Save</button>
                 </div>
             </form>
 
-            <div class="col-12 d-flex justify-content-center">
-                <button type="submit" class="btn btn-danger w-25 m-2" id="btn-save">Save</button>
-            </div>
         </div>
 
         <div class="p-4">
@@ -46,7 +47,7 @@
             </form> 
 
 
-            <table id="harcama-tablosu" class="table table-bordered table-hover table-striped mt-4 text-center">
+            <table id="expenditure-table" class="table table-bordered table-hover table-striped mt-4 text-center">
                 <thead>
                     <tr>
                       <th scope="col" class="w-25">Date</th>
@@ -56,7 +57,7 @@
                     </tr>
                   </thead>
 
-                  <tbody id="harcama-body">
+                  <tbody id="expenditure-body">
                     <!-- <tr>
                       <th scope="row">1</th>
                       <td>Mark</td>
