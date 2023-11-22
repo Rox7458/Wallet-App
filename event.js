@@ -1,19 +1,23 @@
-//selectors
+//buttons
 
-const addBtn = document.querySelector(".btn-add")
-const addInput = document.querySelector(".add-input")
-const addForm = document.querySelector(".add-form")
+const addBtn = document.getElementById("btn-add")
+const addInput = document.getElementById("add-input")
+const addForm = document.getElementById("add-form")
 
-const earningOut = document.querySelector(".earning")
+const formAdd = document.getElementById("form-add")
 
-let gelirler = 0
+let earnings = 0
 
-addForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    gelirler = gelirler + Number(addInput.value)
-    console.log(gelirler);
-    localStorage.setItem("gelirler", gelirler)
-    earningOut.innerText = gelirler
-    addForm.reset()
-})
+formAdd.addEventListener("submit" )
+
+
+
+
+
+
+
+
+
+
+
 

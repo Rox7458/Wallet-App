@@ -23,35 +23,36 @@
                 </div>
 
                 <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label text-light">Amount Spent</label>
+                  <label for="inputPassword4" class="form-label text-light">Amount</label>
                   <input type="number" class="form-control amount-spent" id="inputPassword4" placeholder="1000$">
                 </div>
 
                 <div class="col-12">
-                  <label for="inputAddress" class="form-label text-light">Kind Of Spending</label>
+                  <label for="inputAddress" class="form-label text-light">Spending Area</label>
                   <input type="text" class="form-control kind-spending" id="inputAddress" placeholder="Rent,Bill">
                 </div>
             </form>
 
             <div class="col-12 d-flex justify-content-center">
-                <button type="submit" class="btn btn-danger w-25 m-2 btn-save">Save</button>
+                <button type="submit" class="btn btn-danger w-25 m-2" id="btn-save">Save</button>
             </div>
         </div>
 
         <div class="p-4">
 
-            <div class="col-12 d-flex gap-1 add-form">
+            <form class="col-12 d-flex gap-1" id="form-add">
                 <input type="text" class="form-control add-input" id="inputAddress" placeholder="write your earning">
-                <button type="submit" class="btn btn-success  h-25 btn-add">Add</button>
-            </div>
+                <button type="submit" class="btn btn-success  h-25" id="btn-add">Add</button>
+            </form> 
+
 
             <table id="harcama-tablosu" class="table table-bordered table-hover table-striped mt-4 text-center">
                 <thead>
                     <tr>
-                      <th scope="col" class="w-25">Tarih</th>
-                      <th scope="col" class="w-50">Harcama Alanı</th>
-                      <th scope="col">Miktar (₺)</th>
-                      <th scope="col">İşlem</th>
+                      <th scope="col" class="w-25">Date</th>
+                      <th scope="col" class="w-50">Spending Area</th>
+                      <th scope="col">Amount(₺)</th>
+                      <th scope="col">Process</th>
                     </tr>
                   </thead>
 
@@ -83,7 +84,7 @@
             </div>
     
             <div class="col-12 d-flex justify-content-center m-3">
-                <button type="submit" class="btn btn-danger m-2 btn-clear">Clear Informations</button>
+                <button type="submit" class="btn btn-danger m-2" id="btn-clear">Clear Informations</button>
             </div>
 
         </div>
