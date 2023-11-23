@@ -88,7 +88,16 @@ const writeExpenditure ({ id, date, area, amount }) => {
 
 const expenditureBody = document.getElementById("expenditure-body")
 
-expenditureBody
+expenditureBody.addEventListener("click", (e) => {
+
+    if(e.target.classList.contains("fa-trash-can")) {
+        e.target.parentElement.parentElement.remove()
+    }
+
+    const id = e.target.id
+    
+
+})
 
 
 
