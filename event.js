@@ -83,13 +83,12 @@ const writeExpenditure ({ id, date, area, amount }) => {
         appendTd(amount),
         createLastTd()
     )
-
-    expenditureBody.append(tr)
-    
-
 }
 
+
 const expenditureBody = document.getElementById("expenditure-body")
+
+expenditureBody
 
 
 
