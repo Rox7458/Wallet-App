@@ -113,6 +113,7 @@ const remainderOut = document.querySelector(".remainder")
 
 const calculateAndUpdate = () => {
     earningOut.innerText = new Intl.NumberFormat().format(earnings)
+    
 }
 
 
