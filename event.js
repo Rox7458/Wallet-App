@@ -27,12 +27,14 @@ formAdd.addEventListener("submit", (e) => {
     earnings = earnings + Number(addInput.value)
     localStorage.setItem("earnings", earnings)
     formAdd.reset()
+    calculateAndUpdate()
 })
 
 //window starter
 
 window.addEventListener("load", () => {
     earnings = Number(localStorage.getItem("earnings")) || 0
+    calculateAndUpdate()
 })
 
 // Expenditure Form
@@ -52,7 +54,7 @@ formSave.addEventListener("submit", (e) => {
     expenditureForm.push(newExpenditure)
     localStorage.setItem("expenditure",JSON.stringify(expenditureForm))
     writeExpenditure(newExpenditure)
-
+    calculateAndUpdate()
 
 })
 
@@ -111,15 +113,35 @@ const earningOut = document.querySelector(".earning")
 const outgoingOut = document.querySelector(".outgoing")
 const remainderOut = document.querySelector(".remainder")
 
+const remainderBox = document.querySelector(".remainder-box")
+
 const calculateAndUpdate = () => {
     earningOut.innerText = new Intl.NumberFormat().format(earnings)
+
+    const outgoings = expenditureForm.reduce(
+        (toplam,harcama) => toplam + Number(harcama.amount), 0
+    )
+
+    outgoingOut.innerText = new Intl.NumberFormat().format(outgoings)
+    remainderOut.innerText = new Intl.NumberFormat().format(earnings - outgoings)
     
+    const debt = earnings - outgoings < 0 ;
+    remainderOut.classList.toggle('test-danger', debt)
+    remainderBox.classList.toggle('test-danger', debt)
+
 }
 
+// clear button
 
+const btnClear = document.getElementById("btn-clear")
 
-
-
-
-
-
+btnClear.addEventListener("click", () => {
+    if (confirm("are you sure you want to delete")) {
+        let earnings = 0
+        let expenditureForm = []
+        localStorage.removeItem("expenditure")
+        localStorage.removeItem("earnings")
+        expenditureBody.innerHTML = ""
+        calculateAndUpdate()
+    }
+})
