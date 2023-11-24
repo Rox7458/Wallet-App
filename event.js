@@ -9,7 +9,7 @@ const formSave = document.getElementById("form-save")
 
 const dateInput = document.getElementById("date-input")
 const amountInput = document.getElementById("amount-input")
-const spendingArea = document.getElementById("spending-area")
+const spendingArea = document.getElementById("spending-area-input")
 
 const addInput = document.getElementById("add-input")
 
@@ -51,13 +51,14 @@ formSave.addEventListener("submit", (e) => {
 
     expenditureForm.push(newExpenditure)
     localStorage.setItem("expenditure",JSON.stringify(expenditureForm))
+    writeExpenditure(newExpenditure)
 
 
 })
 
 //write the expenditure to Dom
 
-const writeExpenditure ({ id, date, area, amount }) => {
+const writeExpenditure = ({id, date, area, amount})=> {
 
     const tr = document.createElement("tr")
 
@@ -83,6 +84,8 @@ const writeExpenditure ({ id, date, area, amount }) => {
         appendTd(amount),
         createLastTd()
     )
+
+    expenditureBody.append(tr)
 }
 
 
@@ -95,9 +98,22 @@ expenditureBody.addEventListener("click", (e) => {
     }
 
     const id = e.target.id
+
+    expenditureForm = expenditureForm.filter((expenditure => expenditure.id != id))
+    localStorage.setItem("expenditure", JSON.stringify(expenditureForm))
     
 
 })
+
+//table of calculate
+
+const earningOut = document.querySelector(".earning")
+const outgoingOut = document.querySelector(".outgoing")
+const remainderOut = document.querySelector(".remainder")
+
+const calculateAndUpdate = () => {
+    earningOut.innerText = new Intl.NumberFormat().format(earnings)
+}
 
 
 
