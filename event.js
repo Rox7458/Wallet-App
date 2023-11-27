@@ -125,7 +125,7 @@ const calculateAndUpdate = () => {
     outgoingOut.innerText = new Intl.NumberFormat().format(outgoings)
     remainderOut.innerText = new Intl.NumberFormat().format(earnings - outgoings)
     
-    const debt = earnings - outgoings < 0 ;
+    const debt = earnings - outgoings < 0;
     remainderOut.classList.toggle('test-danger', debt)
     remainderBox.classList.toggle('test-danger', debt)
 
