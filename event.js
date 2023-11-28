@@ -119,7 +119,7 @@ const calculateAndUpdate = () => {
     earningOut.innerText = new Intl.NumberFormat().format(earnings)
 
     const outgoings = expenditureForm.reduce(
-        (toplam,harcama) => toplam + Number(harcama.amount), 0
+        (total,spending) => total + Number(spending.amount),0
     )
 
     outgoingOut.innerText = new Intl.NumberFormat().format(outgoings)
